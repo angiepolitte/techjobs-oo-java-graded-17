@@ -4,16 +4,19 @@ import java.util.Objects;
 
 public class Employer {
 
+// fields
     private int id;
     private static int nextId = 1;
     private String value;
 
+//constructors
     public Employer() {
         id = nextId;
         nextId++;
     }
 
     public Employer(String value) {
+//        this(); calls the first constructor, it initializes the ID, doing this in any Employer object makes it a default behavior
         this();
         this.value = value;
     }
