@@ -31,8 +31,30 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+//    public Job(String name, String employerName, String locationName, String positionTypeName, String coreCompetencyName) {
+//        this(); // Calls the first constructor to initialize 'id'
+//        this.name = name;
+//        this.employer = new Employer(employerName); // Create new Employer object
+//        this.location = new Location(locationName); // Create new Location object
+//        this.positionType = new PositionType(positionTypeName); // Create new PositionType object
+//        this.coreCompetency = new CoreCompetency(coreCompetencyName); // Create new CoreCompetency object
+//    }
+
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
+//    @Override
+//    public String toString() {
+//        String newLine = System.lineSeparator();
+//        return "Job: " newLine + getId() +
+//                newLine + getName()
+//                newLine + getEmployer() +
+//                newLine + getLocation() +
+//                newLine + getPositionType() +
+//                newLine + getCoreCompetency() +
+//                newLine;
+//
+//    }
+
     @Override
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
         if (this == o) return true;
