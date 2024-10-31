@@ -39,4 +39,44 @@ public void testJobConstructorSetsAllFields() {
         assertFalse(test_job1.equals(test_job2));
     }
 
+@Test
+    public void testToStringStartsAndEndsWithNewLine() {
+        String newLine = System.lineSeparator();
+        Job test_job = new Job();
+        assertTrue(newLine, test_job.toString().startsWith(newLine));
+        assertTrue(newLine, test_job.toString().endsWith(newLine));
+
+
+}
+
+@Test
+    public void testToStringContainsCorrectLabelsAndData() {
+    Job newJob = new Job("Android Developer", new Employer("Meta"), new Location("Remote"), new PositionType("Quality control"), new CoreCompetency("Kotlin"));
+    String newLine = System.lineSeparator();
+    String expectedToStringOutput = newLine + "ID: " + newJob.getId() +
+            newLine + "Name: Android Developer" +
+            newLine + "Employer: Meta" +
+            newLine + "Location: Remote" +
+            newLine + "Position Type: Quality control" +
+            newLine + "Core Competency: Kotlin" +
+            newLine;
+    assertEquals(expectedToStringOutput, newJob.toString());
+}
+
+@Test
+    public void testToStringHandlesEmptyField() {
+    Job newJob = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+    String newLine = System.lineSeparator();
+    String expectedToStringOutput =
+            newLine + "ID: " + newJob.getId() +
+            newLine + "Name: Data not available" +
+            newLine + "Employer: Data not available" +
+            newLine + "Location: Data not available" +
+            newLine + "Position Type: Data not available" +
+            newLine + "Core Competency: Data not available" +
+            newLine;
+    assertEquals(expectedToStringOutput, newJob.toString());
+
+}
+
 }

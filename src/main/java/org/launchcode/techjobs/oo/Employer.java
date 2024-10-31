@@ -4,12 +4,12 @@ import java.util.Objects;
 
 public class Employer {
 
-// fields
+    // fields
     private int id;
     private static int nextId = 1;
     private String value;
 
-//constructors
+    //constructors
     public Employer() {
         id = nextId;
         nextId++;
@@ -24,8 +24,15 @@ public class Employer {
     // Custom toString, equals, and hashCode methods:
 
     @Override
-    public String toString() {
-        return value;
+    public String toString() { return value;
+//        //*******************************
+//        if (value == null) {
+//            return "Data not available";
+//        }
+//        return value;
+//
+//        //    *******************************
+//        //    if value is null, return Data not available, else return value
     }
 
     @Override
@@ -50,6 +57,7 @@ public class Employer {
     public String getValue() {
         return value;
     }
+
 
     public void setValue(String value) {
         this.value = value;

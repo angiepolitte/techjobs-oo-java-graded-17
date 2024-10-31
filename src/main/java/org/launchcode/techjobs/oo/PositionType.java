@@ -21,8 +21,15 @@ public class PositionType {
 
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
     @Override
-    public String toString() {
-        return value;
+    public String toString() { return value;
+//        //*******************************
+//        if (value == null) {
+//            return "Data not available";
+//        }
+//        return value;
+//
+//        //    *******************************
+//        //    if value is null, return Data not available, else return value
     }
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when

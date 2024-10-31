@@ -26,8 +26,15 @@ public class Location {
     // Custom toString, equals, and hashCode methods:
 
     @Override
-    public String toString() {
-        return value;
+    public String toString() { return value;
+//        //*******************************
+//        if (value == null) {
+//            return "Data not available";
+//        }
+//        return value;
+//
+//        //    *******************************
+//        //    if value is null, return Data not available, else return value
     }
 
     @Override
